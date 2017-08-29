@@ -1,0 +1,12 @@
+# /etc/systemd/system/pi-hole-led.service
+[Unit]
+Description=Pi-Hole LED Indicator
+After=dnsmasq.service
+
+[Service]
+ExecStart=/root/pihole-led.sh
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=default.target
